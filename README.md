@@ -1,6 +1,6 @@
 # Melee Combat Extended Resources
 
-Melee Combat Extended is a user-made mod for Arma Reforger that extends melee combat logic of the base game.
+Melee Combat Extended is a user-made mod for Arma Reforger that extends melee combat logic of the base game, detailed information here:
 https://reforger.armaplatform.com/workshop/6595113A3678CF5D-MeleeCombatExtended
 
 ### PREREQUISITES
