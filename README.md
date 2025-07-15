@@ -27,7 +27,7 @@ Colliders can be created using the Simple Collider addon for Blender
 https://github.com/Weisl/simple_collider
 
 You can follow this video tutorial:
-https://www.youtube.com/watch?v=-h9_eOCZh7U&t=326s
+https://www.youtube.com/watch?v=-h9_eOCZh7U
 
 Delete all materials created by Simple Collider addon before exporting to Enfusion Workbench
 
@@ -55,7 +55,7 @@ Sometimes you must simplify the geometry of the collider to make Enfusion Workbe
 
 #### Packing textures in a format supported by Enfusion Engine
 
-You can follow this video tutorial:
-https://www.youtube.com/watch?v=H0BfD3Ri8L0&list=LL&index=19
+This video tutorial covers the proper workflow:
+https://www.youtube.com/watch?v=H0BfD3Ri8L0
 
-The channel packing tool is included in this repo
+The channel packing tool mentioned in the video is included in this repo
