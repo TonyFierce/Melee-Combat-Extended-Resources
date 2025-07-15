@@ -49,3 +49,13 @@ If you have correctly created the colliders in Blender, they should be visible i
 ![Editor Model Colliders](Guide%20Images/Editor%20Model%20Colliders.jpg)
 
 Sometimes you must simplify the geometry of the collider to make Enfusion Workbench accept it during export (use decimate modifier in Blender)
+
+
+### 3. Textures
+
+#### Packing textures in a format supported by Enfusion Engine
+
+You can follow this video tutorial:
+https://www.youtube.com/watch?v=H0BfD3Ri8L0&list=LL&index=19
+
+The channel packing tool is included in this repo
