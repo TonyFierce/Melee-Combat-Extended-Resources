@@ -1,7 +1,7 @@
 # Melee Combat Extended Resources
 
-Melee Combat Extended is a user-made mod for Arma Reforger.
-
+Melee Combat Extended is a user-made mod for Arma Reforger that extends melee combat logic of the base game.
+https://reforger.armaplatform.com/workshop/6595113A3678CF5D-MeleeCombatExtended
 
 ### PREREQUISITES
 Before you open any Blender files included in the repo:
@@ -11,7 +11,7 @@ Before you open any Blender files included in the repo:
 https://community.bistudio.com/wiki/Arma_Reforger:Enfusion_Blender_Tools
 
 
-## Guide: Adding Custom Melee Weapons
+## Guide: Adding New Custom Melee Weapons
 
 ### 1. Blender 3D Model Setup
 
