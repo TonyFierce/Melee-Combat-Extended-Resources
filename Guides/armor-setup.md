@@ -102,4 +102,4 @@ In Attributes/ItemDisplayName you will find:
 - Description
 - Item Hints (tooltips with defensive stats that you see when hovering over MCE armors)
 Example of the armor tooltip:
-![MCE Armor Tooltip](Guide%20Images/MCE%20Item%20Stat%20Tooltips.jpg)
+![MCE Armor Tooltip](../Guide%20Images/MCE%20Item%20Stat%20Tooltips.jpg)
