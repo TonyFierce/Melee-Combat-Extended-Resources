@@ -1,4 +1,4 @@
-# Guide: Melee Weapon Prefab Configuration
+# Guide: How to Configure Melee Weapon Prefabs
 
 ## 1. Setting up Melee Combat Extended as a dependency for your mod
 
