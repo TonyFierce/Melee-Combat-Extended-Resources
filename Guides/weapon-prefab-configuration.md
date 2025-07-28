@@ -18,6 +18,7 @@ Melee Combat Extended\Prefabs\Weapons\Core\MCE_Weapon_Base.et
 
 This prefab already includes all the components required for the melee weapon to work:
 ![Blender Model Orientation](../Guide%20Images/Melee%20Weapon%20Stats.jpg)
+You can duplicate it or inherit from it, depending on your own needs
 
 ## 3. Changing the mesh
 Select MeshObject component in the prefab's hierarchy  
