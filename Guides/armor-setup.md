@@ -2,7 +2,7 @@
 
 ## 1. Setting up Melee Combat Extended as a dependency for your mod
 
-This step is required to be able to access the functionality of custom MCE scripts from within your mod
+This step is required to be able to access the functionality of custom MCE scripts from within your mod  
 Make sure that you have downloaded MCE using Arma Reforger's mod browser
 
 ### When creating a new Enfusion Workbench project (mod)
@@ -14,8 +14,8 @@ With your project open click "Workbench" -> "Options" -> "Dependencies" -> add a
 ## 2. Choose an armor mesh you would like to use
 
 ### Option 1 - Create an armor mesh (3D model) weight painted for the Arma Reforger character rig
-I am not familiar with the process of creating armor models for Arma Reforger
-But there should be many tutorials covering this subject (including the official Bohemia Interactive documentation)
+I am not familiar with the process of creating armor models for Arma Reforger  
+But there should be many tutorials covering this subject (including the official Bohemia Interactive documentation)  
 Make sure that your armor mesh has collision, you can use this free Blender addon to create colliders: https://github.com/Weisl/simple_collider
 
 ### Option 2 - Use an existing armor model (either from base game or some other mod)
@@ -26,10 +26,10 @@ When you open your armor model (.xob) in Enfusion Workbench, it must have at lea
 ![Armor Collision](../Guide%20Images/Armor%20Collision.jpg)
 
 ## 3. Copying one of the MCE Armor Prefabs
-Properly configured MCE armor prefabs can be found in this folder:
+Properly configured MCE armor prefabs can be found in this folder:  
 Melee Combat Extended\Prefabs\Characters\MCE Armor VS Melee Damage\
 
-These prefabs already include all the components and settings required for the armor to protect against melee damage
+These prefabs already include all the components and settings required for the armor to protect against melee damage  
 
 MCE currently comes with sample armor items for 4 equipment slots:
 - Jacket
@@ -44,18 +44,18 @@ Armors are slightly different compared to weapons, they use 2 separate meshes
 Select MeshObject component in the prefab's hierarchy and change the mesh in the Object parameter
 
 ### Mesh of the armor equipped on the character's body
-Select BaseLoadoutClothComponent, change Worn Model and Item Model parameters
+Select BaseLoadoutClothComponent, change Worn Model and Item Model parameters  
 You might want to change the depth and offset parameters here, for examples look at armor items from the base game or other mods
 
 ### Equipment slot
 BaseLoadoutClothComponent -> Unsorted -> AreaType
 
 ## 5. Configuring defensive stats
-In base game armor does not work VS melee damage at all
+In base game armor does not work VS melee damage at all  
 MCE fixes the issue and relies on a custom HitZone script to achieve this
 
 ### Armor hitzone setup
-SCR_ArmorDamageManagerComponent -> Unsorted -> Additional hit zones
+SCR_ArmorDamageManagerComponent -> Unsorted -> Additional hit zones  
 For the armor to work against melee damage the list of "additional hit zones" must contain SCR_MCE_ArmorHitZone:
 ![MCE Armor Hit Zone](../Guide%20Images/MCE%20Armor%20Stats%201.jpg)
 
@@ -90,13 +90,13 @@ To adjust how much an armor piece reduces incoming melee damage you can manipula
 If a melee hit goes through 2 or more armor pieces that protect the targeted body part, their defensive values are applied one after another
 
 ### Explanation of protection vs kinetic damage (bullets)
-This section has nothing to do with MCE and works the same in the base game, but I chose to include it, since it is not very obvious how the armor works in Arma Reforger (as of patch 1.4)
-m_fPassedDamageScale parameter in the SCR_ArmorDamageManagerComponent reduces the incoming kinetic damage in addition to Base Damage Multiplier and Kinetic multiplier (they are stored in SCR_ArmorHitZone)
-0.5 Passed Damage Scale means 50% reduced kinetic damage taken
+This section has nothing to do with MCE and works the same in the base game, but I chose to include it, since it is not very obvious how the armor works in Arma Reforger (as of patch 1.4)  
+m_fPassedDamageScale parameter in the SCR_ArmorDamageManagerComponent reduces the incoming kinetic damage in addition to Base Damage Multiplier and Kinetic multiplier (they are stored in SCR_ArmorHitZone)  
+0.5 Passed Damage Scale means 50% reduced kinetic damage taken  
 But still do your own research and do not take my words for granted if you want to be 100% sure about how kinetic damage works
 
 ## 6. Changing the name, description and tooltip
-Select InventoryItemComponent in the armor prefab
+Select InventoryItemComponent in the armor prefab  
 In Attributes/ItemDisplayName you will find:
 - Name
 - Description
