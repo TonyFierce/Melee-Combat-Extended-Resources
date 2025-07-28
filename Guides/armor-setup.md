@@ -90,10 +90,10 @@ To adjust how much an armor piece reduces incoming melee damage you can manipula
 If a melee hit goes through 2 or more armor pieces that protect the targeted body part, their defensive values are applied one after another
 
 ### Explanation of protection vs kinetic damage (bullets)
-This section has nothing to do with MCE and works the same in the base game, but I chose to include it, since it is not very obvious how the armor works in Arma Reforger (as of patch 1.4)  
-m_fPassedDamageScale parameter in the SCR_ArmorDamageManagerComponent reduces the incoming kinetic damage in addition to Base Damage Multiplier and Kinetic multiplier (they are stored in SCR_ArmorHitZone)  
-0.5 Passed Damage Scale means 50% reduced kinetic damage taken  
-But still do your own research and do not take my words for granted if you want to be 100% sure about how kinetic damage works
+- This section has nothing to do with MCE and works the same in the base game, but I chose to include it, since it is not very obvious how the armor works in Arma Reforger (as of patch 1.4)
+- m_fPassedDamageScale parameter in the SCR_ArmorDamageManagerComponent reduces the incoming kinetic damage in addition to Base Damage Multiplier and Kinetic multiplier (they are stored in SCR_ArmorHitZone)
+- 0.5 Passed Damage Scale means 50% reduced kinetic damage taken
+- But still do your own research and do not take my words for granted if you want to be 100% sure about how kinetic damage works
 
 ## 6. Changing the name, description and tooltip
 Select InventoryItemComponent in the armor prefab  
