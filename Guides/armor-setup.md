@@ -6,7 +6,7 @@ This step is required to be able to access the functionality of custom MCE scrip
 Make sure that you have downloaded MCE using Arma Reforger's mod browser
 
 ### When creating a new Enfusion Workbench project (mod)
-![MCE as dependency](Guide%20Images/MCE%20as%20dependency.jpg)
+![MCE as dependency](../Guide%20Images/MCE%20as%20dependency.jpg)
 
 ### When you already have an existing project (mod)
 With your project open click "Workbench" -> "Options" -> "Dependencies" -> add a new dependency and use the ID of MCE (or you can simply browse to the location where your downloaded MCE folder is saved)
@@ -23,7 +23,7 @@ Make sure that this mesh has collision
 
 ### Proper collision example
 When you open your armor model (.xob) in Enfusion Workbench, it must have at least 1 collider - otherwise it will NOT protect any body parts against melee damage:
-![Armor Collision](Guide%20Images/Armor%20Collision.jpg)
+![Armor Collision](../Guide%20Images/Armor%20Collision.jpg)
 
 ## 3. Copying one of the MCE Armor Prefabs
 Properly configured MCE armor prefabs can be found in this folder:
@@ -57,13 +57,13 @@ MCE fixes the issue and relies on a custom HitZone script to achieve this
 ### Armor hitzone setup
 SCR_ArmorDamageManagerComponent -> Unsorted -> Additional hit zones
 For the armor to work against melee damage the list of "additional hit zones" must contain SCR_MCE_ArmorHitZone:
-![MCE Armor Hit Zone](Guide%20Images/MCE%20Armor%20Stats%201.jpg)
+![MCE Armor Hit Zone](../Guide%20Images/MCE%20Armor%20Stats%201.jpg)
 
 Otherwise, if the armor piece has SCR_ArmorDamageManagerComponent with default SCR_ArmorHitZone it will only protect against kinetic damage (bullets)
 
 ### Choosing body parts (hit zone groups) to be protected
 Scroll down to Additional hit zones/"Your hit zone name"/ProtectedHitZoneGroups parameter:
-![Protected Hit Zone Groups](Guide%20Images/MCE%20Armor%20Stats%202.jpg)
+![Protected Hit Zone Groups](../Guide%20Images/MCE%20Armor%20Stats%202.jpg)
 
 Add all hit zone groups that you want your armor piece to protect
 For example, a jacket might protect:
@@ -75,7 +75,7 @@ For example, a jacket might protect:
 MCE supports multiple armor layers protecting the same body part (hit zone group)
 
 Here is the damage calculation for the hit that targets the head, and melee attack raycast goes through the armored vest and the helmet:
-![Melee Damage VS Armor Calculations](Guide%20Images/Melee%20Damage%20Armor%20Calculations.jpg)
+![Melee Damage VS Armor Calculations](../Guide%20Images/Melee%20Damage%20Armor%20Calculations.jpg)
 As a result, only helmet protects the head, because it protects the hit zone group the body part belongs to
 - The console log with melee damage calculation will be shown if you hit one of the 3 static NPCs in the MCE test map with a melee weapon while playing in Enfusion Workbench
 - This is because a custom SCR_MCE_MeleeDamageMonitorComponent was added to these character prefabs, so they basically act as target dummies
