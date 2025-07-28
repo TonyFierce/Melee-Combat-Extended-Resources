@@ -6,7 +6,7 @@ https://reforger.armaplatform.com/workshop/6595113A3678CF5D-MeleeCombatExtended
 
 ## Step by Step Tutorials
 - [Guide: Creating New Custom Melee Weapon Models](Guides/creating-new-weapons.md)
-- [Guide: How to Configure Melee Weapon Prefab](Guides/weapon-prefab-configuration.md)
+- [Guide: How to Configure Melee Weapon Prefabs](Guides/weapon-prefab-configuration.md)
 - [Guide: How to Create and Configure Armor that Protects VS Melee Damage](Guides/armor-setup.md)
 
 ## BLENDER PREREQUISITES
