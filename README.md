@@ -4,9 +4,10 @@
 Melee Combat Extended is a user-made mod for Arma Reforger that extends the melee combat and armor frameworks of the base game, detailed information can be found here:
 https://reforger.armaplatform.com/workshop/6595113A3678CF5D-MeleeCombatExtended
 
-## Step by Step Tutorials
+## Step by Step Guides
 - [Guide: Creating New Custom Melee Weapon Models](Guides/creating-new-weapons.md)
 - [Guide: How to Configure Melee Weapon Prefabs](Guides/weapon-prefab-configuration.md)
+- [Guide: How to Configure Bayonets to be Usable as Standalone Weapons](Guides/bayonet-configuration.md)
 - [Guide: How to Create and Configure Armor that Protects VS Melee Damage](Guides/armor-setup.md)
 
 ## BLENDER PREREQUISITES
