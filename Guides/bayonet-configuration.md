@@ -34,12 +34,12 @@ Most of the settings specific to bayonets are contained in the InventoryItemComp
 ### Position of the weapon in the character's hands
 
 Open InventoryItemComponent -> Attributes -> Item Animation Attributes  
-Find "Animation IK Pose" parameter  
-If you properly positioned your 3d model in Blender (or whichever software you used) and imported it into Workbench with the transform settings recommended in my guide, you should set it to:  
+Find "Animation IK Pose" parameter - it controls which IK pose is used for holding the weapon  
+If you properly positioned your 3d model in Blender (or whichever software you used) and imported it into Workbench with the transform settings recommended in my guide, you should set the parameter to:  
 Melee Combat Extended\Assets\Weapons\MeleeOneHanded\anims\anm\p_melee_1h_ik.anm
 
 ### Bayonet attachment settings and combat stats
 
-Open InventoryItemComponent -> Attributes -> Custom Attributes
-Configure the attributes to make the bayonet work with whatever firearm you want it to
+Open InventoryItemComponent -> Attributes -> Custom Attributes  
+Configure the attributes to make the bayonet work with whatever firearm you want it to  
 This process would be exactly the same in the base game, MCE does not change anything here
