@@ -20,7 +20,7 @@ This prefab already includes all the components required for the melee weapon to
 ![Blender Model Orientation](../Guide%20Images/Melee%20Weapon%20Stats.jpg)
 You can duplicate it or inherit from it, depending on your own needs  
 
-WARNING: if you are planning to create a 2-handed weapon, you should copy the Sledgehammer prefab instead
+WARNING: if you are planning to create a 2-handed weapon, you should duplicate the Sledgehammer prefab instead
 
 ## 3. Changing the mesh
 Select MeshObject component in the prefab's hierarchy  
@@ -79,5 +79,5 @@ Make sure to select the appropriate animation instance and IK pose
 Open weapon prefab -> InventoryItemComponent -> Attributes -> Item Animation Attributes  
 Currently 2 animation instances with different animations are included in the mod:  
 melee_1h  
-melee_2h_axe
+melee_2h_axe  
 ![Weapon Animation Attributes](../Guide%20Images/Animation%20Attributes.jpg)
