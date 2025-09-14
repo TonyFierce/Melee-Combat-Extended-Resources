@@ -76,8 +76,8 @@ Two-handed sword - on the back, works well for long swords
 
 ## 8. Animation instance
 Make sure to select the appropriate animation instance and IK pose  
-Open weapon prefab -> InventoryItemComponent -> Attributes -> Item Animation Attributes  
+Open weapon prefab -> InventoryItemComponent -> Attributes -> Item Animation Attributes
+![Weapon Animation Attributes](../Guide%20Images/Animation%20Attributes.jpg)
 Currently 2 animation instances with different animations are included in the mod:  
 melee_1h  
-melee_2h_axe  
-![Weapon Animation Attributes](../Guide%20Images/Animation%20Attributes.jpg)
+melee_2h_axe
