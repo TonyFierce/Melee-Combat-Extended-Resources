@@ -16,14 +16,11 @@ With your project open click "Workbench" -> "Options" -> "Dependencies" -> add a
 ### Option 1 - Create an armor mesh (3D model) weight painted for the Arma Reforger character rig
 I am not familiar with the process of creating armor models for Arma Reforger  
 But there should be many tutorials covering this subject (including the official Bohemia Interactive documentation)  
-Make sure that your armor mesh has collision, you can use this free Blender addon to create colliders: https://github.com/Weisl/simple_collider
+Make sure that if you are making a vest or a helmet, it has collision with FireGeo layer preset - otherwise it won't work against bullets  
+You can use this free Blender addon to create colliders: https://github.com/Weisl/simple_collider  
+MCE does not use armor colliders in any way for protection VS melee damage - it only tracks the body part being hit and if there is an armor piece protecting this hit zone
 
 ### Option 2 - Use an existing armor model (either from base game or some other mod)
-Make sure that this mesh has collision
-
-### Proper collision example
-When you open your armor model (.xob) in Enfusion Workbench, it must have at least 1 collider - otherwise it will NOT protect any body parts against melee damage:
-![Armor Collision](../Guide%20Images/Armor%20Collision.jpg)
 
 ## 3. Copying one of the MCE Armor Prefabs
 Properly configured MCE armor prefabs can be found in this folder:  
