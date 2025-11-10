@@ -1,0 +1,83 @@
+AnimSetInstanceSource "{65CD58EB7E17BF36}" {
+ Template "{CD0E6C3490BF0847}anims/workspaces/player/player_main.ast"
+ ParentTemplates {
+  "{41AABAE44257A657}anims/workspaces/player/player_main_pistol.asi"
+ }
+ IkPose "{ECFA68CEAF781BE5}Assets/Weapons/MeleeOneHanded/anims/anm/p_melee_1h_ik.anm"
+ Lines {
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcLow.Show02" {
+   Resource "{DA76D4A4A049D1CB}anims/anm/player/weaponswitch/p_melee_1h_primary_erc_belt_show.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcLow.Show01" {
+   Resource "{DA76D4A4A049D1CB}anims/anm/player/weaponswitch/p_melee_1h_primary_erc_belt_show.anm"
+  }
+  AnimSetInstanceSource_Line "MeleeAttacks.ErcLow.MeleeAttack01" {
+   Resource "{9CE413C7DCBF4DA5}anims/anm/player/attacks/MeleeOneHanded/p_melee_1h_erc_low_attack_cut_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcLow.Hide01" {
+   Resource "{520CDA3B2209039C}anims/anm/player/weaponswitch/p_melee_1h_primary_erc_belt_hide.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcLow.Hide02" {
+   Resource "{520CDA3B2209039C}anims/anm/player/weaponswitch/p_melee_1h_primary_erc_belt_hide.anm"
+  }
+  AnimSetInstanceSource_Line "MeleeAttacks.CroLow.MeleeAttack01" {
+   Resource "{9CE413C7DCBF4DA5}anims/anm/player/attacks/MeleeOneHanded/p_melee_1h_erc_low_attack_cut_ras.anm"
+  }
+  AnimSetInstanceSource_Line "MeleeAttacks.CroLow.MeleeAttackStab" {
+   Resource "{31E40C303F23F023}anims/anm/player/attacks/MeleeOneHanded/p_melee_1h_erc_low_attack_stab_ras.anm"
+  }
+  AnimSetInstanceSource_Line "MeleeAttacks.ErcLow.MeleeAttackStab" {
+   Resource "{31E40C303F23F023}anims/anm/player/attacks/MeleeOneHanded/p_melee_1h_erc_low_attack_stab_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneLow.Hide01" {
+   Resource "{8A1241D07DDB7EBC}anims/anm/player/weaponswitch/p_melee_1h_secondary_pne_slot_backR_hide_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneLow.Show01" {
+   Resource "{B7132CE3B08D1D75}anims/anm/player/weaponswitch/p_melee_1h_secondary_pne_slot_backR_show_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneLow.Show02" {
+   Resource "{B7132CE3B08D1D75}anims/anm/player/weaponswitch/p_melee_1h_secondary_pne_slot_backR_show_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneLow.Hide02" {
+   Resource "{8A1241D07DDB7EBC}anims/anm/player/weaponswitch/p_melee_1h_secondary_pne_slot_backR_hide_low.anm"
+  }
+  AnimSetInstanceSource_Line "MeleeIdle.Cro.Idle" {
+   Resource "{FE9D37EFE5D5AEEA}anims/anm/player/locomotion/MeleeOneHanded/IdleTurns/p_melee_1h_custom_cro_idle.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneRas.Show01" {
+   Resource "{B7132CE3B08D1D75}anims/anm/player/weaponswitch/p_melee_1h_secondary_pne_slot_backR_show_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneRas.Show02" {
+   Resource "{B7132CE3B08D1D75}anims/anm/player/weaponswitch/p_melee_1h_secondary_pne_slot_backR_show_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcRas.Hide01" {
+   Resource "{520CDA3B2209039C}anims/anm/player/weaponswitch/p_melee_1h_primary_erc_belt_hide.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcRas.Hide02" {
+   Resource "{520CDA3B2209039C}anims/anm/player/weaponswitch/p_melee_1h_primary_erc_belt_hide.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneRas.Hide01" {
+   Resource "{8A1241D07DDB7EBC}anims/anm/player/weaponswitch/p_melee_1h_secondary_pne_slot_backR_hide_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.PneRas.Hide02" {
+   Resource "{8A1241D07DDB7EBC}anims/anm/player/weaponswitch/p_melee_1h_secondary_pne_slot_backR_hide_low.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcRas.Show01" {
+   Resource "{DA76D4A4A049D1CB}anims/anm/player/weaponswitch/p_melee_1h_primary_erc_belt_show.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponSwitching.ErcRas.Show02" {
+   Resource "{DA76D4A4A049D1CB}anims/anm/player/weaponswitch/p_melee_1h_primary_erc_belt_show.anm"
+  }
+  AnimSetInstanceSource_Line "MeleeIdle.Climb.Idle" {
+   Resource "{64372B9D02F64CA1}anims/anm/player/locomotion/MeleeOneHanded/climbs/p_melee_1h_climb_right_hand_ik.anm"
+  }
+  AnimSetInstanceSource_Line "MeleeIdle.Erc.Idle" {
+   Resource "{8429C278ED0818B7}anims/anm/player/locomotion/MeleeOneHanded/IdleTurns/p_melee_1h_custom_erc_idle.anm"
+  }
+  AnimSetInstanceSource_Line "MeleeIdle.Pne.Idle" {
+   Resource "{EA962F95721E53BE}anims/anm/player/locomotion/MeleeOneHanded/IdleTurns/p_melee_1h_custom_pne_idle.anm"
+  }
+ }
+ RBF AnimSetInstanceSourceRBFArray "{5CCD1362AAC08DD1}" {
+ }
+}

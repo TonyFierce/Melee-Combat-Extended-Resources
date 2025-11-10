@@ -1,0 +1,460 @@
+AnimSrcGraphFile {
+ Sheets {
+  AnimSrcGraphSheet Intertia {
+   Nodes {
+    AnimSrcNodeVarUpdate StopLFootUpdate {
+     EditorPos -41.3 33.1
+     Child "Var Update 10025"
+     Varupdate {
+      AnimSrcNodeVarUpdateItem "{5CCC8273CA90E23B}" {
+       VariableName "MovementDirection"
+       UpdateOnInit 1
+      }
+     }
+    }
+    AnimSrcNodeStateMachine "StepsStanceSTM 32137" {
+     Tags {
+      "TagStep"
+     }
+     EditorPos -41.5 44.2
+     states {
+      AnimSrcNodeState Erc {
+       EditorPos -47.1 45.1
+       Child "MovementRasIK 39910"
+       StartCondition "Stance == 0"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState Cro {
+       EditorPos -36.4 45.1
+       Child "MovementRasIK 23477"
+       StartCondition "Stance == 1"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{5C8C854F4F9328C8}" {
+       FromState "Erc"
+       ToState "Cro"
+       Duration "0.4"
+       StartTime "GetLowerTime()"
+       Condition "HasVariableChangedTo(Stance, 1) "
+       PostEval 1
+      }
+      AnimSrcNodeTransition "{5C8C854F4F9328D1}" {
+       FromState "Cro"
+       ToState "Erc"
+       Duration "0.4"
+       StartTime "GetLowerTime()"
+       Condition "HasVariableChangedTo(Stance, 0)"
+       PostEval 1
+      }
+     }
+    }
+    AnimSrcNodeIK2Target "ErcMoveRasIKT 22433" {
+     EditorPos -41.4 40.1
+     Child "StepsStanceSTM 32137"
+     Chains {
+      AnimSrcIkTargetBinding "{52B6C165B0879CB3}" {
+       IkTarget "LFootIKTarget"
+       IkChain "LeftLeg"
+      }
+      AnimSrcIkTargetBinding "{52B6C165B0879CFE}" {
+       IkTarget "RFootIKTarget"
+       IkChain "RightLeg"
+      }
+     }
+    }
+    AnimSrcNodeBlend InertiaStopF_B {
+     EditorPos -24.9 63.4
+     BlendWeight "!inRange(MovementDirection, -46, 46)"
+     Child0 "InertiaStopFAnim"
+     Child1 "InertiaStopL_B"
+     Optimization "Skip blended out"
+     SelectMainPath 1
+    }
+    AnimSrcNodeBlend InertiaStopL_B {
+     EditorPos -23.4 65
+     BlendWeight "!inRange(MovementDirection, -136, -46)"
+     Child0 "InertiaStopLAnim"
+     Child1 "InertiaStopR_B"
+     Optimization "Skip blended out"
+     SelectMainPath 1
+    }
+    AnimSrcNodeBlend InertiaStopR_B {
+     EditorPos -22 66.1
+     BlendWeight "!inRange(MovementDirection, 46, 136)"
+     Child0 "InertiaStopRAnim"
+     Child1 "InertiaStopBAnim"
+     Optimization "Skip blended out"
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource InertiaStopFAnim {
+     EditorPos -27.4 64.2
+     Source "Inertia.StopF"
+    }
+    AnimSrcNodeSource InertiaStopLAnim {
+     EditorPos -25.5 65.8
+     Source "Inertia.StopL"
+    }
+    AnimSrcNodeSource InertiaStopRAnim {
+     EditorPos -23.6 67.3
+     Source "Inertia.StopR"
+    }
+    AnimSrcNodeSource InertiaStopBAnim {
+     EditorPos -20.8 67.6
+     Source "Inertia.StopB"
+    }
+    AnimSrcNodeGroupSelect "StepErcAdjRasB 27611" {
+     EditorPos -62.7 55.6
+     Child "ErcMoveRasIKT 23249"
+     Group "Inertia"
+     Column "ErcAdjRas"
+    }
+    AnimSrcNodeBlend "StepsErcRasAdjB 26012" {
+     EditorPos -61.3 52.7
+     BlendWeight "ADSAdjust"
+     Child0 "StepErcAdjRasB 27611"
+     Child1 "StepErcRasB 24286"
+     Optimization "Skip blended out"
+     SelectMainPath 1
+    }
+    AnimSrcNodeGroupSelect "StepErcRasB 24286" {
+     EditorPos -60.4 55.6
+     Child "ErcMoveRasIKT 22841"
+     Group "Inertia"
+     Column "ErcRas"
+    }
+    AnimSrcNodeGroupSelect "StepCroRasB 26243" {
+     EditorPos -19.5 56.9
+     Child "ErcMoveRasIKT 35586"
+     Group "inertia"
+     Column "CroRas"
+    }
+    AnimSrcNodeBlend "StepsErcRasAdjB 22109" {
+     EditorPos -21.1 55.6
+     BlendWeight "ADSAdjust"
+     Child0 "StepCroRasB 22534"
+     Child1 "StepCroRasB 26243"
+     Optimization "Skip blended out"
+     SelectMainPath 1
+    }
+    AnimSrcNodeGroupSelect "StepCroRasB 22534" {
+     EditorPos -22.3 57
+     Child "ErcMoveRasIKT 28800"
+     Group "inertia"
+     Column "CroAdjRas"
+    }
+    AnimSrcNodeGroupSelect "StepErcLowB 13841" {
+     EditorPos -55.6 55.5
+     Child "ErcMoveRasIKT 22215"
+     Group "Inertia"
+     Column "ErcLow"
+    }
+    AnimSrcNodeBlendT "Blend T 30288" {
+     EditorPos -59.8 50.6
+     BlendTime "0.4"
+     Condition "Low"
+     Child0 "StepsErcRasAdjB 26012"
+     Child1 "WaterLevelB"
+     Optimization "Skip blended out"
+     SelectMainPath 1
+    }
+    AnimSrcNodeBlend "StepsErcRasAdjB 40718" {
+     EditorPos -57.4 54.2
+     BlendWeight "ADSAdjust"
+     Child0 "StepErcLowB 34397"
+     Child1 "StepErcLowB 13841"
+     Optimization "Skip blended out"
+     SelectMainPath 1
+    }
+    AnimSrcNodeGroupSelect "StepErcLowB 34397" {
+     EditorPos -57.8 55.5
+     Child "ErcMoveRasIKT 17029"
+     Group "Inertia"
+     Column "ErcAdjLow"
+    }
+    AnimSrcNodeBlend "StepsErcRasAdjB 18623" {
+     EditorPos -16.6 55.4
+     BlendWeight "ADSAdjust"
+     Child0 "StepCroRasB 16388"
+     Child1 "StepCroRasB 13545"
+     Optimization "Skip blended out"
+     SelectMainPath 1
+    }
+    AnimSrcNodeGroupSelect "StepCroRasB 16388" {
+     EditorPos -16.8 56.8
+     Child "ErcMoveRasIKT 33510"
+     Group "inertia"
+     Column "CroAdjLow"
+    }
+    AnimSrcNodeGroupSelect "StepCroRasB 13545" {
+     EditorPos -13.4 57
+     Child "ErcMoveRasIKT 35248"
+     Group "inertia"
+     Column "CroLow"
+    }
+    AnimSrcNodeBlendT "Blend T 25041" {
+     EditorPos -18.5 53.3
+     BlendTime "0.4"
+     Condition "Low"
+     Child0 "StepsErcRasAdjB 22109"
+     Child1 "StepsErcRasAdjB 18623"
+     Optimization "Skip blended out"
+     SelectMainPath 1
+    }
+    AnimSrcNodeIK2Target "ErcMoveRasIKT 23249" {
+     EditorPos -62.4 57.5
+     Child "InertiaStop_ErcPoseB"
+     Chains {
+      AnimSrcIkTargetBinding "{52B6C165B0879CB3}" {
+       IkTarget "LFootIKTarget"
+       IkChain "LeftLeg"
+      }
+      AnimSrcIkTargetBinding "{52B6C165B0879CFE}" {
+       IkTarget "RFootIKTarget"
+       IkChain "RightLeg"
+      }
+     }
+    }
+    AnimSrcNodeIK2Target "ErcMoveRasIKT 22841" {
+     EditorPos -60.1 57.5
+     Child "InertiaStop_ErcPoseB"
+     Chains {
+      AnimSrcIkTargetBinding "{52B6C165B0879CB3}" {
+       IkTarget "LFootIKTarget"
+       IkChain "LeftLeg"
+      }
+      AnimSrcIkTargetBinding "{52B6C165B0879CFE}" {
+       IkTarget "RFootIKTarget"
+       IkChain "RightLeg"
+      }
+     }
+    }
+    AnimSrcNodeIK2Target "ErcMoveRasIKT 17029" {
+     EditorPos -57.4 57.5
+     Child "InertiaStop_ErcPoseB"
+     Chains {
+      AnimSrcIkTargetBinding "{52B6C165B0879CB3}" {
+       IkTarget "LFootIKTarget"
+       IkChain "LeftLeg"
+      }
+      AnimSrcIkTargetBinding "{52B6C165B0879CFE}" {
+       IkTarget "RFootIKTarget"
+       IkChain "RightLeg"
+      }
+     }
+    }
+    AnimSrcNodeIK2Target "ErcMoveRasIKT 22215" {
+     EditorPos -55.3 57.5
+     Child "InertiaStop_ErcPoseB"
+     Chains {
+      AnimSrcIkTargetBinding "{52B6C165B0879CB3}" {
+       IkTarget "LFootIKTarget"
+       IkChain "LeftLeg"
+      }
+      AnimSrcIkTargetBinding "{52B6C165B0879CFE}" {
+       IkTarget "RFootIKTarget"
+       IkChain "RightLeg"
+      }
+     }
+    }
+    AnimSrcNodeIK2Target "ErcMoveRasIKT 28800" {
+     EditorPos -22.4 58.5
+     Child "InertiaStopF_B"
+     Chains {
+      AnimSrcIkTargetBinding "{52B6C165B0879CB3}" {
+       IkTarget "LFootIKTarget"
+       IkChain "LeftLeg"
+      }
+      AnimSrcIkTargetBinding "{52B6C165B0879CFE}" {
+       IkTarget "RFootIKTarget"
+       IkChain "RightLeg"
+      }
+     }
+    }
+    AnimSrcNodeIK2Target "ErcMoveRasIKT 35586" {
+     EditorPos -19.5 58.3
+     Child "InertiaStopF_B"
+     Chains {
+      AnimSrcIkTargetBinding "{52B6C165B0879CB3}" {
+       IkTarget "LFootIKTarget"
+       IkChain "LeftLeg"
+      }
+      AnimSrcIkTargetBinding "{52B6C165B0879CFE}" {
+       IkTarget "RFootIKTarget"
+       IkChain "RightLeg"
+      }
+     }
+    }
+    AnimSrcNodeIK2Target "ErcMoveRasIKT 33510" {
+     EditorPos -16.8 58.3
+     Child "InertiaStopF_B"
+     Chains {
+      AnimSrcIkTargetBinding "{52B6C165B0879CB3}" {
+       IkTarget "LFootIKTarget"
+       IkChain "LeftLeg"
+      }
+      AnimSrcIkTargetBinding "{52B6C165B0879CFE}" {
+       IkTarget "RFootIKTarget"
+       IkChain "RightLeg"
+      }
+     }
+    }
+    AnimSrcNodeIK2Target "ErcMoveRasIKT 35248" {
+     EditorPos -13.8 58.2
+     Child "InertiaStopF_B"
+     Chains {
+      AnimSrcIkTargetBinding "{52B6C165B0879CB3}" {
+       IkTarget "LFootIKTarget"
+       IkChain "LeftLeg"
+      }
+      AnimSrcIkTargetBinding "{52B6C165B0879CFE}" {
+       IkTarget "RFootIKTarget"
+       IkChain "RightLeg"
+      }
+     }
+    }
+    AnimSrcNodeIK2 "MovementRasIK 39910" {
+     EditorPos -59.7 47.5
+     Child "Blend T 30288"
+     Chains {
+      AnimSrcIkBinding "{52B6C165B084EA3A}" {
+       IkTarget "LFootIKTarget"
+       IkChain "LeftLeg"
+      }
+      AnimSrcIkBinding "{52B6C165B084EA61}" {
+       IkTarget "RFootIKTarget"
+       IkChain "RightLeg"
+      }
+     }
+     Solver AnimSrcNodeIK2TwoBoneSolver "{5A9A881DE05A27AF}" {
+      SnapRotation 1
+     }
+     Version 1
+    }
+    AnimSrcNodeIK2 "MovementRasIK 23477" {
+     EditorPos -18.7 50.7
+     Child "Blend T 25041"
+     Chains {
+      AnimSrcIkBinding "{52B6C165B084EA3A}" {
+       IkTarget "LFootIKTarget"
+       IkChain "LeftLeg"
+      }
+      AnimSrcIkBinding "{52B6C165B084EA61}" {
+       IkTarget "RFootIKTarget"
+       IkChain "RightLeg"
+      }
+     }
+     Solver AnimSrcNodeIK2TwoBoneSolver "{5A9A881DE05A27AF}" {
+      SnapRotation 1
+     }
+     Version 1
+    }
+    AnimSrcNodeVarUpdate "Var Update 10025" {
+     EditorPos -41.2 34.4
+     Child "Time Scale 32355"
+     Varupdate {
+      AnimSrcNodeVarUpdateItem "{5DE66EABAE471C80}" {
+       VariableName "MovementSpeed"
+       UpdateOnInit 1
+      }
+     }
+    }
+    AnimSrcNodeBlend InertiaStop_ErcPoseB {
+     EditorPos -59.3 60.2
+     BlendWeight "lerp(0.2, 2, normalize(MovementSpeed, 0.3, 3))"
+     Child0 "InertiaStopPose"
+     Child1 "InertiaStopF_B"
+     IkTargets "Keep Singular From First"
+     Optimization "Always eval both"
+     SelectMainPath 1
+    }
+    AnimSrcNodePose InertiaStopPose {
+     EditorPos -60.4 63.2
+     Source "Inertia.StopF"
+     Time "1.0"
+    }
+    AnimSrcNodeTimeScale "Time Scale 32355" {
+     EditorPos -41.3 36.4
+     Child "Blend T 11124"
+     TimeExpr "lerp(0.75, 1, normalize(MovementSpeed, 0.0, 1.5))"
+    }
+    AnimSrcNodeBlend WaterLevelB {
+     EditorPos -57.3 52.4
+     BlendWeight "if(Stance == 0, normalize(WaterLevel, 0.35, 1.4), 0)"
+     Child0 "StepsErcRasAdjB 40718"
+     Child1 "WaterPoseSrc"
+     Optimization "Always eval left"
+     SelectMainPath 1
+    }
+    AnimSrcNodePose WaterPoseSrc {
+     EditorPos -53.3 53.7
+     Source "IdleTurn.ErcLow.Idle_Water_High"
+     Time "0.0"
+    }
+    AnimSrcNodeFilter "Filter 10825" {
+     EditorPos -29.9 39.3
+     Child "Blend T Erc/Cro Inertia"
+     BoneMask "LRHandsUpperArmsFull"
+    }
+    AnimSrcNodeBlendT "Blend MCE Inertia 1H 2H" {
+     EditorPos -28.2 38
+     Condition "MCE_WeaponType == 0"
+     Child0 "Filter 10825"
+     Child1 "Filter 21911"
+     Optimization "Skip blended out"
+     SelectMainPath 1
+    }
+    AnimSrcNodeBlendT "Blend T 11124" {
+     EditorPos -41.2 37.8
+     BlendTime "0"
+     Condition "MCE_MeleeMode == 1"
+     Child0 "ErcMoveRasIKT 22433"
+     Child1 "Blend 11951"
+     Optimization "Always eval left"
+    }
+    AnimSrcNodeSource "Source 36435" {
+     EditorPos -26.2 42.5
+     Source "MeleeIdle.Cro.Idle"
+    }
+    AnimSrcNodeBlendT "Blend T Erc/Cro Inertia" {
+     EditorPos -27.9 40.9
+     BlendTime "4"
+     BlendFn "Ease In"
+     Condition "Stance == 1"
+     Child0 "Source 41103"
+     Child1 "Source 36435"
+     Optimization "Skip blended out"
+     SelectMainPath 1
+    }
+    AnimSrcNodeFilter "Filter 21911" {
+     EditorPos -26.4 39.5
+     Child "Blend T Erc/Cro Inertia"
+     BoneMask "RHandUpperArmFull"
+    }
+    AnimSrcNodeSource "Source 41103" {
+     EditorPos -29.5 42.5
+     Source "MeleeIdle.Erc.Idle"
+    }
+    AnimSrcNodeSource "Source MCE Climb RIght Hand IK 11814" {
+     EditorPos -35.8 41.6
+     Source "MeleeIdle.Climb.Idle"
+    }
+    AnimSrcNodeFilter "Filter 21612" {
+     EditorPos -35.8 40.1
+     Child "Source MCE Climb RIght Hand IK 11814"
+     BoneMask "RProp"
+    }
+    AnimSrcNodeBlend "Blend 11951" {
+     EditorPos -35.8 38.3
+     BlendWeight "1"
+     Child0 "Blend MCE Inertia 1H 2H"
+     Child1 "Filter 21612"
+     Optimization "Always eval left"
+    }
+   }
+  }
+ }
+}

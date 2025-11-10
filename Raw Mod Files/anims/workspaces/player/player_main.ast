@@ -1,0 +1,245 @@
+AnimSetTemplateSource {
+ Groups {
+  AnimSetTemplateSource_AnimationGroup "{5EE0E44DF229B5A5}" {
+   Name "BreathingADD"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{58ACF5B6B8042DCD}" {
+   Name "Commanding"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D80313A8F}" {
+   Name "Damage"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D80313AE4}" {
+   Name "Death"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{5D068DB7F2906058}" {
+   Name "Deployment"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{5DF099D9C4602254}" {
+   Name "DeploymentPne"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{5C72E100F71F5B8D}" {
+   Name "Face"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{61C6978DD4C5F85C}" {
+   Name "Facials"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D80313A1B}" {
+   Name "Falling"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{5C9EDA42EE7E6452}" {
+   Name "Gestures"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{58B8E6B6E177B1C7}" {
+   Name "IdleEyes"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{565AC9D4B2334E9A}" {
+   Name "IdleTurn"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{5CCE96A1B11E2A49}" {
+   Name "Inertia"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D80313B2B}" {
+   Name "Injured"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D80313A0F}" {
+   Name "Jumping"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D80313A5E}" {
+   Name "Ladder"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{51AE785CAE87B88B}" {
+   Name "LeftHandGadgets"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D80313A62}" {
+   Name "Locomotion"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{59548ACDFF979EF0}" {
+   Name "LocomotionDown"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{59548ACDFF979E14}" {
+   Name "LocomotionUp"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D80313BCF}" {
+   Name "MeleeAttacks"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{65D7616CA4642833}" {
+   Name "MeleeIdle"
+   Animations {
+    "Idle"
+    "Idle_Shield_Melee"
+    "Idle_Shield_Pistol"
+    "Idle_Shield_Pistol_ADS"
+   }
+   Columns {
+    "Climb"
+    "Cro"
+    "CroMove"
+    "Erc"
+    "ErcMove"
+    "Pne"
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{55DEF0D2B1DED122}" {
+   Name "PickUp"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{5D0C5EAC96752EBB}" {
+   Name "ProneTurns"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{5A44DA4C50C7449F}" {
+   Name "SmallSteps"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{59EA820852814B96}" {
+   Name "StanceTransitions"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D80313BFA}" {
+   Name "Swim"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{566CABF755EC2B94}" {
+   Name "Test"
+   Animations {
+   }
+   Columns {
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D80313B17}" {
+   Name "ThrowOverhand"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{5AFAA3D916DB0B6C}" {
+   Name "Unconscious"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D803138D5}" {
+   Name "VerticalMovement"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D803138CB}" {
+   Name "WeaponActions"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+  AnimSetTemplateSource_AnimationGroup "{50B4AD9D803138FC}" {
+   Name "WeaponSwitching"
+   Animations +{
+   }
+   Columns +{
+   }
+  }
+ }
+}

@@ -1,0 +1,266 @@
+AnimSrcGraphFile {
+ Sheets {
+  AnimSrcGraphSheet SmallSteps {
+   Nodes {
+    AnimSrcNodeBlendN StepsRFootN {
+     EditorPos 3.5 46.7
+     BlendWeight "MovementDirection"
+     Thresholds {
+      -180 -90 0 90 180
+     }
+     Children {
+      "StepRFootBAnim" "StepRFootLAnim" "StepRFootFAnim" "StepRFootRAnim" "StepRFootBAnim"
+     }
+     SelectMainPath 1
+    }
+    AnimSrcNodeSourceSync StepRFootBAnim {
+     EditorPos 0.3 48.2
+     Source "SmallSteps.RFootStep_B"
+     Looptype "No Loop"
+     SyncLine "SmallSteps"
+    }
+    AnimSrcNodeSourceSync StepRFootLAnim {
+     EditorPos 2.2 48.7
+     Source "SmallSteps.RFootStep_L"
+     Looptype "No Loop"
+     SyncLine "SmallSteps"
+    }
+    AnimSrcNodeSourceSync StepRFootFAnim {
+     EditorPos 4.8 48.7
+     Source "SmallSteps.RFootStep_F"
+     Looptype "No Loop"
+     SyncLine "SmallSteps"
+    }
+    AnimSrcNodeSourceSync StepRFootRAnim {
+     EditorPos 7 48.2
+     Source "SmallSteps.RFootStep_R"
+     Looptype "No Loop"
+     SyncLine "SmallSteps"
+    }
+    AnimSrcNodeStateMachine StepsStanceSTM {
+     Tags {
+      "TagStep"
+     }
+     EditorPos 3.4 33.7
+     states {
+      AnimSrcNodeState Erc {
+       EditorPos -2.3 34.6
+       Child "StepsErcLowB"
+       StartCondition "Stance == 0"
+       TimeStorage "Normalized Time"
+       IsExit 1
+      }
+      AnimSrcNodeState Cro {
+       EditorPos 8.5 34.6
+       Child "StepsCroLowB"
+       StartCondition "Stance == 1"
+       TimeStorage "Normalized Time"
+       IsExit 1
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{5C8C854F4F9328C8}" {
+       FromState "Erc"
+       ToState "Cro"
+       Duration "0.4"
+       StartTime "GetLowerTime()"
+       Condition "HasVariableChangedTo(Stance, 1) && WeaponDeployed"
+       PostEval 1
+      }
+      AnimSrcNodeTransition "{5C8C854F4F9328D1}" {
+       FromState "Cro"
+       ToState "Erc"
+       Duration "0.4"
+       StartTime "GetLowerTime()"
+       Condition "HasVariableChangedTo(Stance, 0) && WeaponDeployed"
+       PostEval 1
+      }
+     }
+    }
+    AnimSrcNodeBlend StepsErcLowB {
+     EditorPos -2.3 36.1
+     BlendWeight "Low"
+     Child0 "StepsErcRasAdjB"
+     Child1 "StepsErcLowAdjB"
+     Optimization "Skip blended out"
+    }
+    AnimSrcNodeBlend StepsCroLowB {
+     EditorPos 8.4 36
+     BlendWeight "Low"
+     Child0 "StepsCroRasAdjB"
+     Child1 "StepsCroLowAdjB"
+     Optimization "Skip blended out"
+    }
+    AnimSrcNodeBlend StepsErcRasAdjB {
+     EditorPos -3.5 37.6
+     BlendWeight "ADSAdjust"
+     Child0 "StepErcAdjRasB"
+     Child1 "StepErcRasB"
+     Optimization "Skip blended out"
+    }
+    AnimSrcNodeBlend StepsErcLowAdjB {
+     EditorPos -1.1 37.6
+     BlendWeight "ADSAdjust"
+     Child0 "StepErcAdjLowB"
+     Child1 "StepErcLowB"
+     Optimization "Skip blended out"
+    }
+    AnimSrcNodeBlend StepsCroRasAdjB {
+     EditorPos 6.9 37.5
+     BlendWeight "ADSAdjust"
+     Child0 "StepCroAdjRasB"
+     Child1 "StepCroRasB"
+     Optimization "Skip blended out"
+    }
+    AnimSrcNodeBlend StepsCroLowAdjB {
+     EditorPos 9.8 37.5
+     BlendWeight "ADSAdjust"
+     Child0 "StepCroAdjLowB"
+     Child1 "StepCroLowB"
+     Optimization "Skip blended out"
+    }
+    AnimSrcNodeGroupSelect StepErcAdjRasB {
+     EditorPos -5.8 39.1
+     Child "StepSizeTime"
+     Group "SmallSteps"
+     Column "ErcAdjRas"
+    }
+    AnimSrcNodeGroupSelect StepErcRasB {
+     EditorPos -3.6 39.1
+     Child "StepSizeTime"
+     Group "SmallSteps"
+     Column "ErcRas"
+    }
+    AnimSrcNodeGroupSelect StepErcAdjLowB {
+     EditorPos -1 39.1
+     Child "StepSizeTime"
+     Group "SmallSteps"
+     Column "ErcAdjLow"
+    }
+    AnimSrcNodeGroupSelect StepErcLowB {
+     EditorPos 1.2 39.1
+     Child "StepSizeTime"
+     Group "SmallSteps"
+     Column "ErcLow"
+    }
+    AnimSrcNodeGroupSelect StepCroAdjRasB {
+     EditorPos 4.8 39.1
+     Child "StepSizeTime"
+     Group "SmallSteps"
+     Column "CroAdjRas"
+    }
+    AnimSrcNodeGroupSelect StepCroRasB {
+     EditorPos 7.1 39.1
+     Child "StepSizeTime"
+     Group "SmallSteps"
+     Column "CroRas"
+    }
+    AnimSrcNodeGroupSelect StepCroAdjLowB {
+     EditorPos 9.5 39.1
+     Child "StepSizeTime"
+     Group "SmallSteps"
+     Column "CroAdjLow"
+    }
+    AnimSrcNodeGroupSelect StepCroLowB {
+     EditorPos 12 39.1
+     Child "StepSizeTime"
+     Group "SmallSteps"
+     Column "CroLow"
+    }
+    AnimSrcNodeBlendN StepSizeB {
+     EditorPos 3.3 42.7
+     BlendWeight "StepSize"
+     Thresholds {
+      0 1
+     }
+     Children {
+      "Step0Anim" "StepsRFootN"
+     }
+     SelectMainPath 1
+    }
+    AnimSrcNodeSourceSync Step0Anim {
+     EditorPos 1.9 44.2
+     Source "SmallSteps.Step_0"
+     SyncLine "SmallSteps"
+    }
+    AnimSrcNodeTimeScale StepSizeTime {
+     EditorPos 3.3 41.5
+     Child "StepSizeB"
+     TimeExpr "lerp(2, 1, StepSize)"
+    }
+    AnimSrcNodeTimeScale StepsTime {
+     EditorPos 3.4 26
+     Child "ErcMoveRasIKT 26143"
+     TimeExpr "1.5"
+    }
+    AnimSrcNodeVarUpdate StepsUpdate {
+     EditorPos 3.6 24.9
+     Child "StepsTime"
+     Varupdate {
+      AnimSrcNodeVarUpdateItem "{5CCC8273CA90E23B}" {
+       VariableName "MovementDirection"
+       UpdateOnInit 1
+      }
+     }
+    }
+    AnimSrcNodeIK2Target "ErcMoveRasIKT 26143" {
+     EditorPos 3.4 27.3
+     Child "Blend MCE SmallSteps"
+     Chains {
+      AnimSrcIkTargetBinding "{52B6C165B0879CB3}" {
+       IkTarget "LFootIKTarget"
+       IkChain "LeftLeg"
+      }
+      AnimSrcIkTargetBinding "{52B6C165B0879CFE}" {
+       IkTarget "RFootIKTarget"
+       IkChain "RightLeg"
+      }
+     }
+    }
+    AnimSrcNodeBlendT "Blend MCE SmallSteps" {
+     EditorPos 3.5 29.2
+     Condition "MCE_MeleeMode && Low"
+     Child0 "StepsStanceSTM"
+     Child1 "Blend MCE SmallSteps 1H 2H"
+     Optimization "Always eval left"
+    }
+    AnimSrcNodeSource "Source 20086" {
+     EditorPos 21.7 34
+     Source "MeleeIdle.Cro.Idle"
+    }
+    AnimSrcNodeBlendT "Blend T Erc/Cro SmallSteps" {
+     EditorPos 19.7 32.2
+     BlendTime "0.5"
+     BlendFn "S"
+     Condition "Stance == 1"
+     Child0 "Source 11514"
+     Child1 "Source 20086"
+     Optimization "Skip blended out"
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource "Source 11514" {
+     EditorPos 18.3 33.9
+     Source "MeleeIdle.Erc.Idle"
+    }
+    AnimSrcNodeFilter "Filter 19004" {
+     EditorPos 21.8 30.9
+     Child "Blend T Erc/Cro SmallSteps"
+     BoneMask "RHandUpperArmFull"
+    }
+    AnimSrcNodeFilter "Filter 13822" {
+     EditorPos 17.9 30.9
+     Child "Blend T Erc/Cro SmallSteps"
+     BoneMask "LRHandsUpperArmsFull"
+    }
+    AnimSrcNodeBlendT "Blend MCE SmallSteps 1H 2H" {
+     EditorPos 19.5 29.6
+     Condition "MCE_WeaponType == 0"
+     Child0 "Filter 13822"
+     Child1 "Filter 19004"
+     Optimization "Skip blended out"
+     SelectMainPath 1
+    }
+   }
+  }
+ }
+}
